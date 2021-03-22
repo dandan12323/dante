@@ -6,7 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  contName = "";
+  contNumber ="";
+  contacts = [];
 
   constructor() {}
+
+  savecontact(){
+    let contact = {
+      name: this.contName,
+      number: this.contNumber
+    }
+    this.contacts.push(contact);
+    this.clearField();
+  }
+    clearField(){
+      this.contName="";
+      this.contNumber="";
+    }
 
 }
